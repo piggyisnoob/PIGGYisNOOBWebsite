@@ -109,6 +109,19 @@ html {
     flex: 0 0 100%;
 }
 
+.content__name {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    text-decoration: none;
+    align-self: center;
+}
+
+.content__icon {
+    font-weight: 900;
+}
+
 /* ---details in section-box--- */
 .content__title {
     display: block;
@@ -199,4 +212,10 @@ html {
     width: 30px;
 }
 
-
+.upcoming {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 0;
+}
