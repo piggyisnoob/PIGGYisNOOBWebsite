@@ -86,7 +86,7 @@ html {
             20px 20px rgba(255, 255, 255, 0.1)
 }
 
-.container__section-box-content {
+.content {
     font-size: 1rem;
     list-style: none;
     line-height: 1.4;
@@ -94,52 +94,56 @@ html {
 
 
 /* Icon */
-.section-box__content--item > i {
+.content__item > i {
     width: 30px;
     display: inline-block;
     font-weight: 900;
 }
 
-.section-box__content--item  {
+.content__item  {
     display: flex;
     gap: 10px;
 }
 
-.section-box__content--name {
-    flex: 0 0 51.333333%;
+.content__name {
+    flex: 0 0 100%;
 }
 
 /* ---details in section-box--- */
-.section-box__content--header {
+.content__title {
+    display: block;
+}
+
+.content__title--desc {
     font-size: 1.6rem;
     font-weight: 800;
     margin: 0 16px 16px;
 }
 
-.section-box__content--item .section-box__content--name {
+.content__item .content__name {
     font-size: 1.2rem;
     font-weight: 600;
 
 }
 
-.section-box__content-bio .infor {
+.content__info .infor__script {
     font-size: 1.2rem;
     line-height: 1.5;
     font-weight: 650;
 }
 
-.ct-header:hover {
+.content__title:hover {
     border-bottom-left-radius: 16px;
     border-top-right-radius: 16px;
     background-color: #fff;
     color: #000;
 }
 
-.section-box__content-bio {
+.content__info {
     margin-bottom: 2.4rem;
 }
 
-.section-box__content-bio .infor-title {
+.content__info .infor__title {
     text-decoration: underline;
     font-size: 1.5rem;
     background-color: aqua;
@@ -148,4 +152,51 @@ html {
     text-shadow: 2px 2px #000;
     border: 1px double #fff;
 }
+/* process box */
+.content__process {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content__process-percentage {
+    flex: 1;
+    height: 6px;
+    margin: auto;
+    border-radius: 2.5px;
+    background-color: var(--background-div);
+}
+
+.content__process-percentage--real.active-IO {
+    opacity: 1;
+    width: var(--process);
+}
+
+.content__process-percentage--real {
+    width: 0;
+    height: inherit;
+    border-radius: inherit;
+    background-color: var(--blue-color);
+    will-change: transform;
+    opacity: 0;
+    transition: all ease-out 0.8s 0.5s;
+    -o-transition: all ease-out 0.8s 0.5s;
+    -ms-transition: all ease-out 0.8s 0.5s;
+    -webkit-transition: all ease-out 0.8s 0.5s;
+    -moz-transition: all ease-out 0.8s 0.5s;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1),
+        0 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.content__process-number>.content__process-number--real {
+    display: block;
+    width: 48px;
+    text-align: end;
+}
+
+.content__process-name {
+    font-size: 1.6rem;
+    width: 30px;
+}
+
 
