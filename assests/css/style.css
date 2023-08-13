@@ -20,7 +20,6 @@ html {
 .background__background--avatar {
     position: absolute;
     display: flex;
-    align-items: flex-end;
     left: 64px;
     bottom: -100px;
 }
@@ -35,6 +34,7 @@ html {
 }
 
 .banner__background--avatar--name {
+    display: flex;
     font-size: 72px;
     font-weight: 700;
     color: var(--text-color);
@@ -101,6 +101,7 @@ html {
 }
 
 .content__item  {
+    position: relative;
     display: flex;
     gap: 10px;
 }
@@ -123,6 +124,10 @@ html {
 }
 
 /* ---details in section-box--- */
+.content {
+    position: relative;
+}
+
 .content__title {
     display: block;
 }
@@ -180,9 +185,24 @@ html {
     background-color: var(--background-div);
 }
 
-.content__process-percentage--real.active-IO {
-    opacity: 1;
-    width: var(--process);
+.content__process-percentage--real {
+    position: relative;
+}
+
+.content__process-percentage--real:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+    transition: width 2s ease-in;
+    /* z-index: 1; */
+}
+
+.content__process-percentage--real:hover:before {
+    width: 50%;
 }
 
 .content__process-percentage--real {

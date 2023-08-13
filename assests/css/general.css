@@ -16,6 +16,7 @@ html {
 
 .body {
     box-sizing: border-box;
+    overscroll-behavior-block: none;
 }
 
 :root {
@@ -40,3 +41,58 @@ html {
     padding: 0 5vh;
 }
 
+@media (max-width: 739px) {
+    .grid {
+        padding: 0;
+    }
+
+    .banner__background--image {
+        padding-bottom: 50%;
+    }
+
+    .background__background--avatar {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        bottom: -220px;
+        left: 0;
+    }
+
+    .banner__background--avatar--name {
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    .main .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 156px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .container .container-left {
+        min-width: 100%;
+        
+    }
+    .container .container-right {
+        min-width: 100%;
+    }
+    .banner__background .background__background--avatar {
+        position: absolute;
+        display: flex;
+        left: 5px;
+        align-items: center;
+        flex-direction: column;
+        bottom: -192px;
+    }
+    .banner__background .banner__background--image {
+        height: 42vh;
+    }
+
+    .banner__background .banner__background--avatar--name {
+        font-size: 44px;
+    }
+
+}
