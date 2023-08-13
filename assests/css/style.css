@@ -55,13 +55,11 @@ html {
 .container-left {
     flex: 0 0 41.66667%;
     max-width: 41.66667%;
-    min-width: 395px;
 }
 
 .container-right {
     flex: 0 0 58.33333%;
     max-width: 58.33333%;
-    min-width: 480px;
 }
 
 .container__section-box {
@@ -183,29 +181,39 @@ html {
     margin: auto;
     border-radius: 2.5px;
     background-color: var(--background-div);
+    transition: all 0.8s 0.8s ease-out;
 }
 
-.content__process-percentage--real {
-    position: relative;
-}
-
-.content__process-percentage--real:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0;
-    top: 0;
-    left: 0;
-    background-color: aqua;
-    transition: width 2s ease-in;
-    /* z-index: 1; */
-}
-
-.content__process-percentage--real:hover:before {
+.content__process-percentage--real.real1 {
+    height: inherit;
     width: 50%;
+    background-color: blue;
+    border-radius: 2.5px;
+}
+.content__process-percentage--real.real2 {
+    height: inherit;
+    width: 10%;
+    background-color: blue;
+    border-radius: 2.5px;
+}
+.content__process-percentage--real.real3 {
+    height: inherit;
+    width: 1%;
+    background-color: blue;
+    border-radius: 2.5px;
+}
+.content__process-percentage--real.real4 {
+    height: inherit;
+    width: 1%;
+    background-color: blue;
+    border-radius: 2.5px;
 }
 
-.content__process-percentage--real {
+.content__process-percentage--real.active-IO {
+    width: var(--process);
+}
+
+/* .content__process-percentage--real {
     width: 0;
     height: inherit;
     border-radius: inherit;
@@ -219,7 +227,9 @@ html {
     -moz-transition: all ease-out 0.8s 0.5s;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1),
         0 0 1px 0 rgba(0, 0, 0, 0.1);
-}
+} */
+
+
 
 .content__process-number>.content__process-number--real {
     display: block;
@@ -239,3 +249,4 @@ html {
     justify-content: space-around;
     bottom: 0;
 }
+
