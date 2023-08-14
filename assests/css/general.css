@@ -17,6 +17,7 @@ html {
 .body {
     box-sizing: border-box;
     overscroll-behavior-block: none;
+    height: 1200px;
 }
 
 :root {
