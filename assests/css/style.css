@@ -165,7 +165,8 @@ html {
     background-color: aqua;
     color: #000;
     border-radius: 5px;
-    text-shadow: 2px 2px #000;
+    /* text-shadow: 2px 2px #000; */
+    min-width: 200px;
     border: 1px double #fff;
 }
 /* process box */
@@ -181,10 +182,39 @@ html {
     margin: auto;
     border-radius: 2.5px;
     background-color: var(--background-div);
-    transition: all 0.8s 0.8s ease-out;
+    position: relative;
 }
 
 .content__process-percentage--real.real1 {
+    position: relative;
+    background-color: var(--background-div);
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+.content__process-percentage--real.real2 {
+    position: relative;
+    background-color: var(--background-div);
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+.content__process-percentage--real.real3 {
+    position: relative;
+    background-color: var(--background-div);
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+.content__process-percentage--real.real4 {
+    position: relative;
+    background-color: var(--background-div);
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+/* .content__process-percentage--real.real1 {
     height: inherit;
     width: 50%;
     background-color: blue;
@@ -207,29 +237,107 @@ html {
     width: 1%;
     background-color: blue;
     border-radius: 2.5px;
-}
+} */
 
-.content__process-percentage--real.active-IO {
+/* .content__process-percentage--real.active-IO {
     width: var(--process);
-}
+} */
 
-/* .content__process-percentage--real {
-    width: 0;
+.content__process-percentage--real.real1::after {
+    position: absolute;
+    content: "";
+    width: 70%;
     height: inherit;
     border-radius: inherit;
     background-color: var(--blue-color);
     will-change: transform;
-    opacity: 0;
-    transition: all ease-out 0.8s 0.5s;
+    transition: transform 0.5s ease;
+    /* transition: all ease-out 0.8s 0.5s;
     -o-transition: all ease-out 0.8s 0.5s;
     -ms-transition: all ease-out 0.8s 0.5s;
     -webkit-transition: all ease-out 0.8s 0.5s;
     -moz-transition: all ease-out 0.8s 0.5s;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1),
-        0 0 1px 0 rgba(0, 0, 0, 0.1);
-} */
+        0 0 1px 0 rgba(0, 0, 0, 0.1); */
+    transform: scaleX(0);
+    transform-origin: left;
+}
 
+.content__process-percentage--real.real2::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: inherit;
+    border-radius: inherit;
+    background-color: var(--blue-color);
+    will-change: transform;
+    transition: transform 0.5s ease;
+    /* transition: all ease-out 0.8s 0.5s;
+    -o-transition: all ease-out 0.8s 0.5s;
+    -ms-transition: all ease-out 0.8s 0.5s;
+    -webkit-transition: all ease-out 0.8s 0.5s;
+    -moz-transition: all ease-out 0.8s 0.5s;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1),
+        0 0 1px 0 rgba(0, 0, 0, 0.1); */
+    transform: scaleX(0);
+    transform-origin: left;
+}
 
+.content__process-percentage--real.real3::after {
+    position: absolute;
+    content: "";
+    width: 15%;
+    height: inherit;
+    border-radius: inherit;
+    background-color: var(--blue-color);
+    will-change: transform;
+    transition: transform 0.5s ease;
+    /* transition: all ease-out 0.8s 0.5s;
+    -o-transition: all ease-out 0.8s 0.5s;
+    -ms-transition: all ease-out 0.8s 0.5s;
+    -webkit-transition: all ease-out 0.8s 0.5s;
+    -moz-transition: all ease-out 0.8s 0.5s;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1),
+        0 0 1px 0 rgba(0, 0, 0, 0.1); */
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.content__process-percentage--real.real4::after {
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: inherit;
+    border-radius: inherit;
+    background-color: var(--blue-color);
+    will-change: transform;
+    transition: transform 0.5s ease;
+    /* transition: all ease-out 0.8s 0.5s;
+    -o-transition: all ease-out 0.8s 0.5s;
+    -ms-transition: all ease-out 0.8s 0.5s;
+    -webkit-transition: all ease-out 0.8s 0.5s;
+    -moz-transition: all ease-out 0.8s 0.5s;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1),
+        0 0 1px 0 rgba(0, 0, 0, 0.1); */
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.content__process-percentage--real.real1:hover::after {
+    transform: scale(1);
+}
+
+.content__process-percentage--real.real2:hover::after {
+    transform: scale(1);
+}
+
+.content__process-percentage--real.real3:hover::after {
+    transform: scale(1);
+}
+
+.content__process-percentage--real.real4:hover::after {
+    transform: scale(1);
+}
 
 .content__process-number>.content__process-number--real {
     display: block;
